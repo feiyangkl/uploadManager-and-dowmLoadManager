@@ -10,11 +10,11 @@
 #import <UIKit/UIKit.h>
 @class UploadModel;
 typedef NS_ENUM(NSUInteger,UploadState){
-XHTUploadStateNone = 0,       //未开始上传
-XHTUploadStateWaiting = 1,    //等待上传
-XHTUploadStateUploading = 2,  //上传中
-XHTUploadStateCompleted = 3,  //上传完成
-XHTUploadStateFailed = 4,     // 上传失败
+UploadStateNone = 0,       //未开始上传
+UploadStateWaiting = 1,    //等待上传
+UploadStateUploading = 2,  //上传中
+UploadStateCompleted = 3,  //上传完成
+UploadStateFailed = 4,     // 上传失败
 };
 
 typedef void(^StatusChanged)(UploadModel *model);

@@ -37,24 +37,24 @@
 /// 根据状态的改变,随机改变更新文件
 - (NSString *)statusText {
     switch (self.status) {
-        case XHTUploadStateNone: {
+        case UploadStateNone: {
             return @"上传";
             break;
         }
-        case XHTUploadStateUploading: {
+        case UploadStateUploading: {
             return @"上传中";
             break;
             
         }
-        case XHTUploadStateCompleted: {
+        case UploadStateCompleted: {
             return @"上传完成";
             break;
         }
-        case XHTUploadStateFailed: {
+        case UploadStateFailed: {
             return @"上传失败";
             break;
         }
-        case XHTUploadStateWaiting: {
+        case UploadStateWaiting: {
             return @"等待上传";
             break;
         }

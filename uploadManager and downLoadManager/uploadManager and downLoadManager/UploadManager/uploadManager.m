@@ -58,7 +58,7 @@ static uploadManager *_uploadManager = nil;
         }
     }
     // 只用是waitting时才能去上传
-    if (upLoadDataModel.status == XHTUploadStateWaiting) {
+    if (upLoadDataModel.status == UploadStateWaiting) {
         
         [self uploadingModel:upLoadDataModel];
         
@@ -88,7 +88,7 @@ static uploadManager *_uploadManager = nil;
 }
 
 - (void)uploadingModel:(UploadModel *)model{
-    //    model.status = XHTUploadStateUploading;
+    //    model.status = UploadStateUploading;
     NSDictionary *parms =@{@"user":@"id"};
     NSString *URL = @"127.0.0.1";
 
@@ -115,7 +115,7 @@ static uploadManager *_uploadManager = nil;
         
         dispatch_async(dispatch_get_main_queue(), ^{
 
-            model.status = XHTUploadStateUploading;
+            model.status = UploadStateUploading;
             model.progress = progress;
         });
         
@@ -130,12 +130,12 @@ static uploadManager *_uploadManager = nil;
                 
                 model.progress = progress;
             });
-            model.status = XHTUploadStateFailed;
+            model.status = UploadStateFailed;
             
             
         }else {
             
-            model.status = XHTUploadStateCompleted;
+            model.status = UploadStateCompleted;
          
         }
     }];
