@@ -2,7 +2,7 @@
 //  uploadManager.m
 //  uploadManager and downLoadManager
 //
-//  Created by lanxum on 16/11/2.
+//  Created by feiyangkl on 16/11/2.
 //  Copyright © 2016年 feiyangkl. All rights reserved.
 //
 
@@ -90,13 +90,15 @@ static uploadManager *_uploadManager = nil;
 - (void)uploadingModel:(UploadModel *)model{
     //    model.status = UploadStateUploading;
     NSDictionary *parms =@{@"user":@"id"};
+    
     NSString *URL = @"127.0.0.1";
 
     //  将上传文件转换为data
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:model.url]];
     
     // 序列化请求
-    AFHTTPRequestSerializer *Serializer=[[AFHTTPRequestSerializer alloc]init];
+    AFHTTPRequestSerializer *Serializer=[AFHTTPRequestSerializer serializer];
+    
     // 创建request
     NSMutableURLRequest *request =
     [Serializer multipartFormRequestWithMethod:@"POST"

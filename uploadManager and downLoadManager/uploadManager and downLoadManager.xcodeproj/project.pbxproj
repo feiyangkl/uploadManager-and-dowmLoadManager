@@ -32,6 +32,8 @@
 		ED7B34071DC9B82600A34198 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7B33F51DC9B82600A34198 /* UIRefreshControl+AFNetworking.m */; };
 		ED7B34081DC9B82600A34198 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7B33F71DC9B82600A34198 /* UIWebView+AFNetworking.m */; };
 		ED7B340B1DC9B84C00A34198 /* uploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7B340A1DC9B84C00A34198 /* uploadManager.m */; };
+		EDE58FFB1DD1A87C0074F12C /* DownloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE58FFA1DD1A87C0074F12C /* DownloadModel.m */; };
+		EDE58FFE1DD1A8900074F12C /* DownloadManage.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE58FFD1DD1A8900074F12C /* DownloadManage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,10 @@
 		ED7B33F71DC9B82600A34198 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		ED7B34091DC9B84C00A34198 /* uploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uploadManager.h; sourceTree = "<group>"; };
 		ED7B340A1DC9B84C00A34198 /* uploadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = uploadManager.m; sourceTree = "<group>"; };
+		EDE58FF91DD1A87C0074F12C /* DownloadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadModel.h; sourceTree = "<group>"; };
+		EDE58FFA1DD1A87C0074F12C /* DownloadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadModel.m; sourceTree = "<group>"; };
+		EDE58FFC1DD1A8900074F12C /* DownloadManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManage.h; sourceTree = "<group>"; };
+		EDE58FFD1DD1A8900074F12C /* DownloadManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +217,10 @@
 		ED7B33C81DC9B4D900A34198 /* DownloadManager */ = {
 			isa = PBXGroup;
 			children = (
+				EDE58FF91DD1A87C0074F12C /* DownloadModel.h */,
+				EDE58FFA1DD1A87C0074F12C /* DownloadModel.m */,
+				EDE58FFC1DD1A8900074F12C /* DownloadManage.h */,
+				EDE58FFD1DD1A8900074F12C /* DownloadManage.m */,
 			);
 			path = DownloadManager;
 			sourceTree = "<group>";
@@ -333,7 +343,7 @@
 		ED7B33891DC9807E00A34198 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = feiyangkl;
 				TargetAttributes = {
 					ED7B33901DC9807E00A34198 = {
@@ -412,12 +422,14 @@
 				ED7B33991DC9807E00A34198 /* AppDelegate.m in Sources */,
 				ED7B33D11DC9B62100A34198 /* UploadModel.m in Sources */,
 				ED7B33FD1DC9B82600A34198 /* AFURLSessionManager.m in Sources */,
+				EDE58FFE1DD1A8900074F12C /* DownloadManage.m in Sources */,
 				ED7B33FC1DC9B82600A34198 /* AFURLResponseSerialization.m in Sources */,
 				ED7B34051DC9B82600A34198 /* UIImageView+AFNetworking.m in Sources */,
 				ED7B33F91DC9B82600A34198 /* AFNetworkReachabilityManager.m in Sources */,
 				ED7B34001DC9B82600A34198 /* AFAutoPurgingImageCache.m in Sources */,
 				ED7B33FA1DC9B82600A34198 /* AFSecurityPolicy.m in Sources */,
 				ED7B33F81DC9B82600A34198 /* AFHTTPSessionManager.m in Sources */,
+				EDE58FFB1DD1A87C0074F12C /* DownloadModel.m in Sources */,
 				ED7B34011DC9B82600A34198 /* AFImageDownloader.m in Sources */,
 				ED7B33961DC9807E00A34198 /* main.m in Sources */,
 				ED7B34081DC9B82600A34198 /* UIWebView+AFNetworking.m in Sources */,
@@ -492,8 +504,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -536,8 +550,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -647,6 +663,7 @@
 				ED7B33C01DC9807F00A34198 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED7B33C11DC9807F00A34198 /* Build configuration list for PBXNativeTarget "uploadManager and downLoadManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -655,6 +672,7 @@
 				ED7B33C31DC9807F00A34198 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED7B33C41DC9807F00A34198 /* Build configuration list for PBXNativeTarget "uploadManager and downLoadManagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -663,6 +681,7 @@
 				ED7B33C61DC9807F00A34198 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

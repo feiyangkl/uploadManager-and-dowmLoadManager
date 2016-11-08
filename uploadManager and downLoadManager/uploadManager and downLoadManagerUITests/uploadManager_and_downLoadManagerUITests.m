@@ -2,7 +2,7 @@
 //  uploadManager_and_downLoadManagerUITests.m
 //  uploadManager and downLoadManagerUITests
 //
-//  Created by lanxum on 16/11/2.
+//  Created by feiyangkl on 16/11/2.
 //  Copyright © 2016年 feiyangkl. All rights reserved.
 //
 

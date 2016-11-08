@@ -1,14 +1,14 @@
 //
-//  UploadModel.m
-//  uploadManager and downLoadManager
+//  DownloadModel.m
+//  DownloadManager and downLoadManager
 //
-//  Created by feiyangkl on 16/11/2.
+//  Created by feiyangkl on 16/11/8.
 //  Copyright © 2016年 feiyangkl. All rights reserved.
 //
 
-#import "UploadModel.h"
+#import "DownloadModel.h"
 
-@implementation UploadModel
+@implementation DownloadModel
 
 /// 当进度改变的时候,回到进度改变block
 - (void)setProgress:(CGFloat)progress {
@@ -24,7 +24,7 @@
 }
 
 /// 同理,当状态改变的时候,回调状态改变block
-- (void)setStatus:(UploadState)status {
+- (void)setStatus:(DownloadState)status {
     if (_status != status) {
         _status = status;
         
@@ -37,29 +37,32 @@
 /// 根据状态的改变,随机改变更新文件
 - (NSString *)statusText {
     switch (self.status) {
-        case UploadStateNone: {
-            return @"上传";
+        case DownloadStateNone: {
+            return @"下载";
             break;
         }
-        case UploadStateUploading: {
-            return @"上传中";
+        case DownloadStateDownloading: {
+            return @"下载中";
             break;
             
         }
-        case UploadStateCompleted: {
-            return @"上传完成";
+        case DownloadStateCompleted: {
+            return @"下载完成";
             break;
         }
-        case UploadStateFailed: {
-            return @"上传失败";
+        case DownloadStateFailed: {
+            return @"下载失败";
             break;
         }
-        case UploadStateWaiting: {
-            return @"等待上传";
+        case DownloadStatesuspend: {
+            return @"停止";
+            break;
+        }
+        case DownloadStateWaiting: {
+            return @"等待下载";
             break;
         }
     }
 }
-
 
 @end
